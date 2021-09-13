@@ -9,7 +9,7 @@ export class BaseService {
 
     constructor(httpClient: HttpClient, _injector: Injector){}
 
-    protected getRequestHeaders(): { headers: HttpHeaders | { [header: string]: string | string[]; } } {
+    protected RequestHeaders(): { headers: HttpHeaders | { [header: string]: string | string[]; } } {
         let headers = new HttpHeaders({
             'Content-Type': 'application/json',
             'Accept': `application/json, text/plain, */*`,
@@ -20,7 +20,7 @@ export class BaseService {
         return { headers: headers };
     }
 
-    protected getBaseUrl() : string {
+    protected BaseUrl() : string {
         return this._baseUrl;
     }
 }
